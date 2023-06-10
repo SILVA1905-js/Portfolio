@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+    <style>
+
+@import"https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@450&display=swap');
+body {
+  font-family: 'Inconsolata', sans-serif;
+  margin: 0px auto;
+  color: #000000
+}
+
+h1,h1,h3,p,a {
+  margin: 0px;
+  letter-spacing: .14rem;
+
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+  font-size: 1.75rem
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.titulo-h2 {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  overflow: hidden; /* Esconde o conteúdo que exceder a largura do elemento */
+      white-space: nowrap; /* Evita que o texto seja quebrado em várias linhas */
+      animation: typing 3.5s steps(40, end); /* Duração da animação e número de "etapas" */
+}
+
+.linha {
+  margin: 80px auto 120px auto;
+  display: block;
+  content: "";
+  width: 960px;
+  height: 3px
+}
+
+.paragrafo {
+  font-size: 1.25rem;
+  color: #525252
+}
+
+@media(max-width: 1080px) {
+  .linha {
+      width:600px
+  }
+}
+
+@media(max-width: 700px) {
+  .linha {
+      width:400px
+  }
+}
+
+@media(max-width: 480px) {
+  .linha {
+      width:300px
+  }
+}
+
+@media(max-width: 360px) {
+  .linha {
+      width:200px
+  }
+}
+
+@media(max-width: 250px) {
+  .linha {
+      display:none
+  }
+}
+
+.header {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.header-menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.header-menu a {
+  font-size: 1.125rem;
+  line-height: 1.3rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #141414;
+  display: block;
+  position: relative
+}
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: #4a2cc5;
+  margin-top: 4px;
+  transition: .3s;
+  position: absolute
+}
+
+.header-menu a:hover::after {
+  width: 60%
+}
+
+.header-menu a:hover {
+  color: #4a2cc5
+}
+
+@media(max-width: 800px) {
+  .header {
+      flex-direction:column;
+      gap: 40px;
+      padding: 20px
+  }
+
+  .header a {
+      background-color: #f5f5f5;
+      border-radius: 5px
+  }
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  align-items: center
+}
+
+.intro::after {
+  grid-column: 1/-1;
+  justify-self: center;
+  display: block;
+  content: "";
+  width: 90%;
+  height: 2px;
+  margin-top: 40px;
+  background: #000000
+}
+
+.introimg1 {
+  width: 350px;
+   border-radius: 100%; 
+}
+
+.intro h2::after {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #4a2cc5;
+  border-radius: 50%;
+  margin-left: 5px
+}
+
+.intro-txt {
+  position: relative;
+  
+}
+
+.intro p::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  background: url("../media/SVG/Decoracao-cubos.svg") no-repeat center;
+  position: absolute;
+  right: 0px
+}
+
+.intro-botoes {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px
+}
+
+.intro-curriculo,.intro-github,.intro-linkedin {
+  padding: 6px 16px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  transition: .3s
+}
+
+.intro-curriculo:hover,.intro-github:hover,.intro-linkedin:hover {
+  color: #fff;
+  scale: 1.05;
+  box-shadow: 20px 15px 20px -20px #000
+}
+
+.intro-curriculo:hover {
+  background: linear-gradient(#684adf, #4a2cc5)
+}
+
+.intro-github:hover {
+  background: linear-gradient(#5b6571, #23272d)
+}
+
+.intro-linkedin:hover {
+  background: linear-gradient(#1b7cdd, #0a66c2)
+}
+
+@media(max-width: 1300px) {
+  .intro p::after {
+      display:none
+  }
+}
+
+@media(max-width: 900px) {
+  .intro p {
+      font-size:1rem
+  }
+
+  .intro-botoes a {
+      font-size: 1.25rem
+  }
+}
+
+@media(max-width: 700px) {
+  .intro {
+      grid-template-columns:1fr
+  }
+
+  .intro p {
+      font-size: 1.25rem
+  }
+
+  .intro-botoes {
+      grid-column: 1;
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      text-align: center
+  }
+
+  .intro-botoes a {
+      font-size: 1.5rem
+  }
+
+  .intro img {
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      
+  }
+}
+
+@media(max-width: 360px) {
+  .intro-txt h2 {
+      font-size:1.5rem
+  }
+
+  .intro img {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto
+  }
+}
+
+.projetos {
+  max-width: 1200px;
+  margin: 0 auto 120px auto;
+  padding: 20px
+}
+
+.projetos .role {
+  display: none;
+  font-weight: bold;
+  margin-bottom: 15px
+}
+
+.projetos h2::after {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: #4a2cc5
+}
+
+.projetos-unidade{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px
+}
+
+
+.projetos-unidade picture img {
+  transition: .3s;
+  border: 2px solid #000000;
+  border-radius: 5px;
+ 
+}
+
+.projetos-unidade picture img:hover {
+  transition: .3s;
+  transform: scale(1.1);
+  box-shadow: 20px 20px 20px -20px rgba(0,0,0,.4392156863)
+}
+
+
+.projetos-lista li+li {
+  margin-top: 120px
+}
+
+.projetos-lista picture {
+  grid-row: 1/5;
+  max-width: 600px
+}
+
+.linguagens {
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 10px
+}
+
+.linguagens p {
+  display: inline-block;
+  padding: 5px 5px;
+  font-weight: bold;
+  transition: .3s
+}
+
+.linguagens p:hover {
+  color: #4a2cc5;
+  transform: scale(1.05);
+  transition: .3s
+}
+
+.codeBtns {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 25px;
+  grid-column: 2;
+  justify-self: flex-start;
+  align-self: flex-end
+}
+
+.codeBtns .btncode {
+  padding: 10px;
+  border-radius: 50%
+}
+
+.codeBtns .btncode img {
+  display: block;
+  width: 25px;
+  height: 25px
+}
+
+.projeto-impar h3 {
+  text-align: right
+}
+
+.projeto-impar picture {
+  grid-column: 2;
+  justify-self: right
+}
+
+.projeto-impar p {
+  text-align: right
+}
+
+.projeto-impar .linguagens {
+  justify-content: end
+}
+
+.projeto-impar .codeBtns {
+  grid-column: 1;
+  justify-self: flex-end
+}
+
+@keyframes seta {
+  from {
+      right: 30px
+  }
+
+  to {
+      right: 20px
+  }
+}
+
+@media(max-width: 1080px) {
+  .projetos h2 {
+      margin-bottom:10px
+  }
+
+  .projetos .role {
+      display: inline-block
+  }
+
+  .projetos-unidade {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 570px;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #4a2cc5;
+      border-radius: 4px;
+      padding: 20px
+  }
+
+  .projetos-lista picture,.projeto-impar picture {
+      grid-column: initial;
+      grid-row: 3;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto
+  }
+
+  .projetos-lista {
+      display: flex;
+      gap: 40px;
+      padding-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow-x: auto
+  }
+
+  .projetos-lista li+li {
+      margin-top: 0px
+  }
+
+  .proj {
+      position: relative
+  }
+
+  .proj::after {
+      content: "→";
+      font-weight: bold;
+      position: absolute;
+      top: -35px;
+      right: 30px;
+      color: #4a2cc5;
+      font-size: 1.25rem;
+      animation: seta .5s ease-in 0s infinite alternate
+  }
+
+  .projetos-unidade h3,.projetos-unidade p {
+      text-align: center
+  }
+
+  .linguagens,.projeto-impar .linguagens,.projetos-unidade h3 {
+      justify-content: center;
+      margin: 0 auto
+  }
+
+  .linguagens {
+      align-self: center
+  }
+
+  .projeto-impar .codeBtns,.projetos-unidade .codeBtns {
+      grid-column: 1;
+      justify-self: center
+  }
+}
+
+@media(max-width: 740px) {
+  .projetos-unidade {
+      grid-template-rows:auto 168px auto 64px;
+      gap: 10px;
+      width: 400px
+  }
+}
+
+@media(max-width: 490px) {
+  .projetos-unidade {
+      grid-template-rows:72px 168px auto 64px;
+      width: 300px
+  }
+
+  .projetos-unidade .paragrafo {
+      font-size: 1rem
+  }
+}
+
+footer {
+  background-color: #000;
+  color: #b4b4b4;
+  border-top: solid 1px #121212
+}
+
+.footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px
+}
+
+.js .fadeInDown {
+  transform: translate3d(0, -20px, 0)
+}
+
+.js .fadeInUp {
+  transform: translate3d(0, 20px, 0)
+}
+
+.js .fadeInRight {
+  transform: translate3d(20px, 0, 0)
+}
+
+.js .fadeInLeft {
+  transform: translate3d(-20px, 0, 0)
+}
+
+.js [data-anime] {
+  opacity: 0
+}
+
+.js .anime {
+  opacity: 1;
+  transform: none;
+  transition: transform .8s,opacity .8s
+}
+
+/*# sourceMappingURL=index.css.map */
+
+    </style>
+</head>
+<body>
+    <section aria-label="Projetos" class="projetos" id="projetos">
+        <h2 class="titulo-h2">PROJETOS</h2>
+        <span class="role">(Role para ver mais).</span>
+        <div class="proj">
+            <ul class="projetos-lista">
+
+                <li>
+                    <div class="projetos-unidade projeto-impar">
+                        <h3><a href="https://silva1905-js.github.io/Tic-tac-toe-project/Project/Jogodavelha.html" target="_blank">Jogo da velha</a></h3>
+
+                        <p class="paragrafo">Jogo da Velha, produzida no <strong>Bootcamp</strong> de JavaScript na <strong>SMtreinamentos</strong>. Nele pude fixar conhecimentos de <strong>JQuery, JavaScript e CSS</strong> e eventos <strong>Grid</strong> aplicados na estrutura do Jogo. </p>
+
+                        <picture>
+                            <a class="telecall-img projeto-unidade-img" href="https://silva1905-js.github.io/Tic-tac-toe-project/Project/Jogodavelha.html" target="_blank"><img src="imgs/Projeto.png" alt="Página do projeto telecall"></a>
+                        </picture>
+
+                        <div class="linguagens">
+                            <p>JavaScript</p>
+                            <p>JQuery</p>
+                            <p>CSS</p>
+                            <p>HTML</p>
+                        </div>
+
+                        <div class="codeBtns">
+                            <div class="intro-curriculo btncode">
+                                <a href="https://silva1905-js.github.io/Tic-tac-toe-project/Project/Jogodavelha.html" target="_blank"><img src="imgs/ver.svg" alt="Navegar para o site" title="Navegar para o site"></a>
+                            </div>
+                            <div class="intro-curriculo btncode">
+                                <a href="https://github.com/SILVA1905-js/Tic-tac-toe-project" target="_blank"><img src="imgs/code.svg" alt="Navegar para o site" title="Navegar para o código"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="projetos-unidade">
+                        <h3><a href="https://silva1905-js.github.io/ProjectFullstack/index1.html" target="_blank">Website</a></h3>
+
+                        <p class="paragrafo">"Website", produzido durante o "Bootcamp" de <strong>js Fullstack</strong> da SMtreinamentos. Primeiro projeto criado como <strong>FullStack</strong> e utilizando o Mongoose e Express para conectar o backend com o <strong>banco de dados</strong>.</p>
+                        <p class= "paragrafo"> PS. Esse Projeto foi juntado em duas partes, uma de <strong>Cadastro</strong> que apos ser preenchido, ira te mandar para o <strong>WebSite</strong>.</p>
+
+                        <picture>
+                            <a class="telecall-img projeto-unidade-img" href="https://silva1905-js.github.io/ProjectFullstack/index1.html" target="_blank"><img src="https://github.com/SILVA1905-js/ProjectFullstack/blob/main/imgs/website.png?raw=true" alt="Página do projeto telecall"></a>
+                        </picture>
+
+                        <div class="linguagens">
+                            <p>JavaScript</p>
+                            <p>HTML5</p>
+                            <p>CSS</p>
+                           
+                        </div>
+
+                        <div class="codeBtns">
+                            <div class="intro-curriculo btncode">
+                                <a href="https://silva1905-js.github.io/ProjectFullstack/index1.html" target="_blank"><img src="imgs/ver.svg" alt="Navegar para o site" title="Navegar para o site"></a>
+                            </div>
+                            <div class="intro-curriculo btncode">
+                                <a href="https://github.com/SILVA1905-js/ProjectFullstack/blob/main/index.html" target="_blank"><img src="imgs/code.svg" alt="Navegar para o site" title="Navegar para o código"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="projeto-impar projetos-unidade">
+                        <h3><a href="https://silva1905-js.github.io/ProjectFullstack/index1.html" target="_blank">Registro</a></h3>
+
+                        <p class="paragrafo">Primeira parte do Projeto FullStack, registro rotacionado com esquema de usuarios e rotacionado com Banco de dados <strong>(MongoDB)</strong>  Usei  <strong>Post</strong> para postar Diretamente no Backend .</p>
+
+                        <picture>
+                            <a class="telecall-img projeto-unidade-img" href="https://silva1905-js.github.io/ProjectFullstack/index1.html" target="_blank"><img src="https://github.com/SILVA1905-js/ProjectFullstack/blob/main/imgs/registro.png?raw=true" alt="Página do projeto telecall"></a>
+                        </picture>
+
+                        <div class="linguagens">
+                            <p>JavaScript</p>
+                            <p>HTML5</p>
+                            <p>CSS</p>
+                            <p>MongoDB</p>
+                            <p>Express</p>
+                        </div>
+
+                        <div class="codeBtns">
+                            <div class="intro-curriculo btncode">
+                                <a href="https://silva1905-js.github.io/ProjectFullstack/index1.html" target="_blank"><img src="imgs/ver.svg" alt="Navegar para o site" title="Navegar para o site"></a>
+                            </div>
+                            <div class="intro-curriculo btncode">
+                                <a href="https://github.com/SILVA1905-js/ProjectFullstack" target="_blank"><img src="imgs/code.svg" alt="Navegar para o site" title="Navegar para o código"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="projetos-unidade">
+                        <h3><a href="https://silva1905-js.github.io/CocaProject/" target="_blank">Coca-Cola Project</a></h3>
+
+                        <p class="paragrafo">Landing Page de um Projeto fictício da Coca-Cola, feito por min, nesse Projeto usei <strong>HTML</strong> e <strong>CSS</strong>.</p>
+
+                        <picture>
+                            <a class="bickraft-img projeto-unidade-img" href="https://silva1905-js.github.io/CocaProject/" target="_blank"><img src="imgs/project.png" alt="Página do projeto MV Vasos e Plantas"></a>
+                        </picture>
+
+                        <div class="linguagens">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                    
+                        </div>
+
+                        <div class="codeBtns">
+                            <div class="intro-curriculo btncode">
+                                <a href="https://silva1905-js.github.io/CocaProject/" target="_blank"><img src="imgs/ver.svg" alt="Navegar para o site" title="Navegar para o site"></a>
+                            </div>
+                            <div class="intro-curriculo btncode">
+                                <a href="https://github.com/SILVA1905-js/CocaProject" target="_blank"><img src="imgs/code.svg" alt="Navegar para o site" title="Navegar para o código"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="projetos-unidade projeto-impar">
+                        <h3><a href="https://silva1905-js.github.io/GitHub-sharing/" target="_blank">Compartilhando Meu GitHub</a></h3>
+
+                        <p class="paragrafo">Landing Page feito Como "Apresentação" Para meu <strong>GitHub</strong> ,nesse simples site usei as seguintes tecnologias :<strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.</p>
+
+                        <picture>
+                            <a class="bickraft-img projeto-unidade-img" href="https://silva1905-js.github.io/GitHub-sharing/" target="_blank"><img src="./imgs/project1.png" alt="Página do projeto Game Mata Mosquito"></a>
+                        </picture>
+
+                        <div class="linguagens">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                        </div>
+
+                        <div class="codeBtns">
+                            <div class="intro-curriculo btncode">
+                                <a href="https://silva1905-js.github.io/GitHub-sharing/" target="_blank"><img src="imgs/ver.svg" alt="Navegar para o site" title="Navegar para o site"></a>
+                            </div>
+                            <div class="intro-curriculo btncode">
+                                <a href="https://github.com/SILVA1905-js/GitHub-sharing" target="_blank"><img src="imgs/code.svg" alt="Navegar para o site" title="Navegar para o código"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="projetos-unidade">
+                        <h3><a href="https://silva1905-js.github.io/Calculator/Calculator.html" target="_blank">Calculadora</a></h3>
+
+                        <p class="paragrafo">Criei uma Calculadora como forma de aperfeiçoar minhas habilidades. Nesse Codigo Usei: <strong>HTML</strong>,<strong>CSS</strong> e <strong>JavaScript</strong>. </p>
+
+                        <picture>
+                            <a class="bickraft-img projeto-unidade-img" href="https://silva1905-js.github.io/Calculator/Calculator.html" target="_blank"><img src="imgs/Captura de tela 2023-05-29 031203.png" alt="Página do projeto Desafio Inforce"></a>
+                        </picture>
+
+                        <div class="linguagens">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                          
+                        </div>
+
+                        <div class="codeBtns">
+                            <div class="intro-curriculo btncode">
+                                <a href="https://silva1905-js.github.io/Calculator/Calculator.html" target="_blank"><img src="imgs/ver.svg" alt="Navegar para o site" title="Navegar para o site"></a>
+                            </div>
+                            <div class="intro-curriculo btncode">
+                                <a href="https://github.com/SILVA1905-js/Calculator" target="_blank"><img src="imgs/code.svg" alt="Navegar para o site" title="Navegar para o código"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+               
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    
+</body>
+
+
+    </html>
