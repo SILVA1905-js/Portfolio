@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata:wght@200&family=Kaushan+Script&family=Oswald:wght@200&family=Teko:wght@500&family=Tilt+Prism&display=swap');
+
 .nome{
    font-size:  23px;
    font-family: 'Dancing Script', cursive;
@@ -1694,7 +1695,7 @@ a[data-v-eb4848b0] {
     }
 }
 .interact-cursor{
-    width: 30;
+    width: 50;
    
 }
 .website{
@@ -1704,4 +1705,44 @@ a[data-v-eb4848b0] {
     border-radius: 8px;
     color: black;
 }
+/* Estilo para a lista de projetos */
 
+.work-list {
+    list-style: none;
+    padding: 0; /* Adicionamos padding para o espaçamento entre as imagens */
+    margin: 0;
+    display: flex; /* Usar flexbox para ajustar o layout */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Alinhar os itens ao centro horizontalmente */
+    gap: 100px; /* Definir espaçamento entre os itens */
+  }
+  
+  /* Estilo para as imagens */
+  .work-list img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Adicione bordas arredondadas para fins estéticos, se desejar */
+    cursor: pointer;
+  }
+  
+  /* Estilo para o botão "Veja Mais" */
+  .see-more-btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+/* Estilo para a barra de tecnologias */
+.tech-bar {
+    display: flex; /* Usar flexbox para exibir as imagens lado a lado */
+    justify-content: center; /* Centralizar as imagens horizontalmente */
+    margin-top: 5px; /* Espaçamento entre a imagem e a barra de tecnologias */
+  }
+  
+  /* Estilo para as imagens de tecnologias na barra */
+  .tech-bar img {
+    width: 100px; /* Tamanho das imagens de tecnologias */
+    height: 30px;
+    margin: 0 5px; /* Espaçamento entre as imagens de tecnologias */
+ 
+  }
