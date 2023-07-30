@@ -1721,7 +1721,7 @@ a[data-v-eb4848b0] {
   .work-list img {
     max-width: 100%;
     height: auto;
-    display: block;
+    display: flex;
     border-radius: 5px; /* Adicione bordas arredondadas para fins estéticos, se desejar */
     cursor: pointer;
   }
